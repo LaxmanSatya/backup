@@ -1,0 +1,24 @@
+# implemenation of basic python like variables, core datatypes, type conversion, user input, formatted output.
+
+# basic variables and datatypes
+def bvar():
+    #number types
+    intv = 10
+    floatv = 10.9
+    # boolean types
+    boolv = True
+    # DataStructures and derived types
+    listv = []
+    typlev = ()
+    setv = {}
+    dictv = {1 : 1}
+
+# type cast to tuple
+def tc_tt(var):
+    if var is not None:
+        return 
+
+    
+
+if __name__ == '__main__':
+    bvar()

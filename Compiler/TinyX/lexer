@@ -1,0 +1,54 @@
+# This takes SourceCode and Breaks, Tonkens
+
+# Every Thing in Source Code is Consider as Raw String.
+source = "x = 10 + 20"
+
+tokens = []
+
+i = 0
+
+while i < len(source):
+
+    char = source[i]
+
+    # to ignore spaces
+    if char.isspace():
+        i += 1
+        continue
+
+    # Number
+    if char.isdigit():
+        number = ""
+
+        while i < len(source) and source[i].isdigit():
+            number += source[i]
+            i += 1
+
+        tokens.append(("NUMBER", number))
+        continue
+
+    # IDentifier
+    if char.isalpha():
+        name = ""
+
+        while i < len(source) and source[i].isalnum():
+            name += source[i]
+            i += 1
+
+        tokens.append(("IDENTIFIER", name))
+        continue
+
+    # Operations
+    if char == "+":
+        tokens.append(("PLUS", "+"))
+
+    elif char == "-":
+            tokens.append(("MINUS", "-"))
+
+    elif char == '=':
+            tokens.append(("EQUALS", "="))
+
+    i += 1
+
+print(tokens)
+
