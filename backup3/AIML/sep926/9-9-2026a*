@@ -1,0 +1,8 @@
+A*search
+
+informed search algorithm (is addmisible - nor more code)
+
+f(x) = g(n) - h(n)
+
+h(n) : gurstic value(admissible)
+g(n) : current node

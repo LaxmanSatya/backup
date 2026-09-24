@@ -1,0 +1,103 @@
+# PythonCode
+
+r'''
+from collections import defaultdict
+from typing import Self
+
+class Graph:
+    # Construct graph
+    def __init__(self: Self) -> None:
+        # To store graph in a Default Dictionary
+        self.graph = defaultdict(list)
+
+    # Function to add an edge to the graph
+    def addEdge(self: Self, u: int, v: int) -> None:
+        self.graph[u].append(v)
+
+    # A helper function used by DFS
+    def _dfs_util(self: Self, v: int, visited: set) -> None:
+        # Mark the current node as visited and print it
+        visited.add(v)
+        print(v, end=" ")
+
+        # Recur for all the vertices adjacent to this vertex
+        for neighbor in self.graph[v]:
+            if neighbor not in visited:
+                self._dfs_util(neighbor, visited)
+
+    # Main DFS function to handle both connected and disconnected graphs
+    def dfs(self: Self, start_vertex: int = None) -> None:
+        visited = set()
+
+        # If a starting vertex is provided, run DFS from there first
+        if start_vertex is not None:
+            print(f"DFS starting from vertex {start_vertex}:")
+            self._dfs_util(start_vertex, visited)
+            print() # For newline
+
+        # Handle remaining unvisited nodes (if the graph is disconnected)
+        remaining_vertices = [v for v in self.graph if v not in visited]
+        if remaining_vertices:
+            print("DFS for remaining disconnected components:")
+            for vertex in remaining_vertices:
+                if vertex not in visited:
+                    self._dfs_util(vertex, visited)
+            print()
+
+
+# --- Example Usage ---
+if __name__ == "__main__":
+    g = Graph()
+    
+    # Component 1 (Connected)
+    g.addEdge(0, 1)
+    g.addEdge(0, 2)
+    g.addEdge(1, 2)
+    g.addEdge(2, 0)
+    g.addEdge(2, 3)
+    g.addEdge(3, 3)
+    
+    # Component 2 (Disconnected from the first component)
+    g.addEdge(4, 5)
+
+    # Execute DFS starting from vertex 2
+    g.dfs(start_vertex=2)
+
+    addEdge(self, u, v): Replaces addGraph(). It targets the source vertex u inside the defaultdict and appends the destination vertex v.visited tracking via set(): Tracks visited nodes efficiently using a set (\(O(1)\) lookups) rather than a list to ensure optimal performance.Disconnected Graph Coverage: The main dfs() method contains a fallback loop. If a graph has isolated components (like 4 -> 5 in the example above), the script will pick them up and traverse them completely instead of ignoring them.If you are looking to modify this implementation further, let me know:Do you want an iterative (stack-based) approach instead of this recursive one?Is this for a directed or an undirected graph?Do you need to track paths or find connected components?
+    
+'''
+
+from collections import defaultdict
+from typing import  Self
+
+class Graph:
+    # Construct graph
+    def __init__(self : Self,) -> None:
+        # to strore graph in Default Dictionary
+        self.graph = defaultdict(list)
+
+    # functions to add an edge
+    # transverse means travel
+    # u is vetex -
+    # v is node .
+    def addEdge(self : Self, u : int, v : int) -> None:
+        self.graph[u].append(v)
+
+    def _dfs_util(self : Self, v : int, visited : set) -> None:
+        visited.add(v)
+        print(v, end = ' ')
+
+        # marking all vertics as not visited
+        visited = [False] * (max(self.graph) + 1)
+
+        queue : list = []
+
+        queue.append(s) #type: ignore [ERROR]
+
+
+    def BFS(self : Self, s):
+        pass
+
+class DSF:
+    def __init__(self : Self,) -> None:
+        self.graph = defaultdict(list)

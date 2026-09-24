@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex-Box Layout</title>
+    <style>
+        .container{
+                display:flex;
+                flex-direction:row;
+                gap:20px;
+        }
+            .box{
+                width:20px;
+                height:20px;
+                border:2px solid black;
+            }
+            .boxing{
+                width:100%;
+                height:100%;
+                object-fit:cover;
+                padding: 25px;
+            }
+    </style>
+</head>
+<body>
+    <h2>Gallery-Flex Row Layout/h2>
+        <div class = "boxing">
+            <img src="Space.png" alt="image1">
+        </div>
+        <div class = "boxing">
+            <img src="Space.png" alt="image2">
+        </div>
+        <div class = "boxing">
+            <img src="Space.png" alt="image3">
+        </div>
+</body>
+</html>

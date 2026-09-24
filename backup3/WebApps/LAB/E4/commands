@@ -1,0 +1,5 @@
+docker build -t ecommerce-homepage .
+
+docker run -d -p 8080:80 ecommerce-homepage
+
+http://localhost:8080

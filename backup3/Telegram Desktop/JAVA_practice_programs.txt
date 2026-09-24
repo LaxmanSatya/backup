@@ -1,0 +1,281 @@
+class Simpleif 
+{
+    public static void main(String[] args) 
+	{
+        	int num = 10;
+	        if (num > 0)
+			{
+		            System.out.println("Number is positive");
+		        }
+	}
+}
+
+--------------------------
+
+class Ifelse 
+{
+
+    public static void main(String[] args) 
+	{
+	        int num = 5;
+	        if (num % 2 == 0) 
+			{
+            			System.out.println("Even");
+        		}
+        	else 
+			{
+				System.out.println("Odd");
+        		}
+    	}
+}
+
+--------------------------------------------
+
+class Nestedifelse 
+{
+    public static void main(String[] args) 
+	{
+	        int num = 10;
+	        if (num == 0) 
+			{
+	            		System.out.println("Zero");
+            		}
+            	else 
+			{
+				if(num>0)
+					{
+                				System.out.println("Positive");
+					}
+				else
+					{
+                				System.out.println("Negative");
+					}
+            		}
+    	}
+}
+
+-------------------------------
+
+class Num2wrd 
+{
+    public static void main(String[] args) 
+	{
+        int num = 5;
+        if (num == 0) 
+	{
+            System.out.println("Zero");
+        }
+        else if (num == 1) 
+	{
+            System.out.println("One");
+        }
+        else if (num == 2) 
+	{
+            System.out.println("Two");
+        }
+        else if (num == 3) 
+	{
+            System.out.println("Three");
+        }
+        else if (num == 4) 
+	{
+            System.out.println("Four");
+        }
+        else if (num == 5) 
+	{
+            System.out.println("Five");
+        }
+        else if (num == 6) 
+	{
+            System.out.println("Six");
+        }
+        else if (num == 7) 
+	{
+            System.out.println("Seven");
+        }
+        else if (num == 8) 
+	{
+            System.out.println("Eight");
+        }
+        else if (num == 9) 
+	{
+            System.out.println("Nine");
+        }
+        else 
+	{
+            System.out.println("Invalid number");
+        }
+    }
+}
+
+-----------------------------------------
+
+class Num2wrdSwitch {
+    public static void main(String[] args) 
+	{
+        int num = 5;
+        switch (num) 
+	{
+            case 0:
+                System.out.println("Zero");
+                break;
+
+            case 1:
+                System.out.println("One");
+                break;
+
+            case 2:
+                System.out.println("Two");
+                break;
+
+            case 3:
+                System.out.println("Three");
+                break;
+
+            case 4:
+                System.out.println("Four");
+                break;
+
+            case 5:
+                System.out.println("Five");
+                break;
+
+            case 6:
+                System.out.println("Six");
+                break;
+
+            case 7:
+                System.out.println("Seven");
+                break;
+
+            case 8:
+                System.out.println("Eight");
+                break;
+
+            case 9:
+                System.out.println("Nine");
+                break;
+
+            default:
+                System.out.println("Invalid number");
+        }
+    }
+}
+
+------------------------------------
+
+class Forloop 
+{
+    public static void main(String[] args) 
+	{
+        	for (int i = 1; i <= 5; i++) 
+		{
+            		System.out.println("KLEF");
+        	}
+    }
+}
+
+-----------------------------------
+
+class Whileloop 
+{
+    public static void main(String[] args) 
+	{
+	        int i = 1;
+	        while (i <= 5) 
+			{
+            			System.out.println(i);
+            			i++;
+        		}
+    	}
+}
+
+--------------------------
+
+class Dowhileloop 
+{
+    public static void main(String[] args) 
+	{
+	        int i = 1;
+	        do 
+		{
+            		System.out.println(i);
+            		i++;
+        	}while (i <= 5);
+    	}
+}
+
+--------------------------
+
+Method without args and return value
+
+class Method1 
+{
+    	static void add() 
+	{
+        	int a=10, b=20,sum;
+		sum = a + b;
+        	System.out.println("Sum = " + sum);
+    	}
+
+    	public static void main(String[] args) 
+	{
+        	add();
+    	}
+}
+
+-------------------------------------
+
+Method with args and without return value
+
+class Method2args 
+{
+	static void add(int a, int b) 
+	{
+        	int sum = a + b;
+        	System.out.println("Sum = " + sum);
+    	}
+    	public static void main(String[] args) 
+	{
+        	add(10, 12);
+    	}
+}
+
+-------------------------------------
+Method with args and return value
+
+class Method3argsrv
+{
+    static int add(int a, int b) 
+	{
+        	int sum = a + b;
+        	return sum;
+    	}
+    public static void main(String[] args) 
+	{
+	        int result;
+		result = add(5, 220);
+	        System.out.println("Sum = " + result);
+    	}
+}
+
+-------------------------------------
+
+Method without args and with return value
+
+class Method4rv 
+{
+    static int getData() 
+	{
+        	int num = 225;
+        	return num;
+    	}
+
+    public static void main(String[] args) 
+	{
+       		int data; 
+		data = getData();
+		System.out.println("Data = " + data);
+    	}
+}
+

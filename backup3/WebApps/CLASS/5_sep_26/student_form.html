@@ -1,0 +1,161 @@
+<body bgcolor="skyblue">
+<br/><br/>
+<form>
+    <!-- Personal Details-->
+     <fieldset>
+        <legend>Personal Details</legend> 
+
+        <label for="name">Student Name:</label>
+        <input type="text" id = "name" name = "name" required> <!-- required used to must the user to full input of that box -->
+        <br/><br/>
+
+        <label for="password">Password:</label>
+        <input type="password" id = "password" name = "password" required> <!-- required used to must the user to full input of that box -->
+        <br/><br/>
+
+        <label for="age">Age:</label>
+        <input type="number" id = "age" name = "name" min = "12" max = "30" required> <!-- required used to must the user to full input of that box -->
+        <br/><br/>
+
+        <label for="name">Gender:</label>
+        <input type="radio" id = "gender" name = "gender" value = "male" required> Male <!-- required used to must the user to full input of that box -->
+        <input type="radio" id = "gender" name = "gender" value = "female" required> Female <!-- required used to must the user to full input of that box -->
+        <input type="radio" id = "gender" name = "gender" value = "others" required> Others<!-- required used to must the user to full input of that box -->
+        <br/><br/>
+
+        <!-- Check box -->
+        <label> HObbies:</label>
+        <input type="checkbox" name="hobby" value = "reading"> Reading
+        <input type="checkbox" name="hobby" value = "sports"> Sports
+        <input type="checkbox" name="hobby" value = "music"> Music
+        <br/><br/>
+
+</fieldset>
+
+<br/><br/>
+
+        <!-- Address Details -->
+         <fieldset>
+            <legend>Address Details</legend>
+
+            <label for="address">Address:</label><br/>
+
+            <textarea id = "address" name = "address"
+                        rows = "5" cols = "40"
+                        placeholder = "Enter your address"></textarea>
+                        <br/><br/>
+
+            <label for="city">City:</label>
+            <input type = "text" id = "city" name = "city">
+            <br/>
+            <br/>
+
+            <label for = "pincode">Pincode:</label>
+            <input type="number" id="pincode" name = "pincode">
+            <br/><br/>
+
+        </fieldset>
+
+<br/><br/>
+<!-- Course Details -->
+ <filedset>
+    <legend>Course Details</legend>
+    <select id = "course" name = "course">
+        <optgroup label = "Undergraduate">
+            <option value = "cse">CSE</option>
+            <option value = "ece">ECE</option>
+            <option value = "eee">EEE</option>
+        </optgroup>
+        <optgroup label = "Postgraduate">
+            <option value = "aiml">AIML</option>
+            <option value = "ece">ECE</option>
+            <option value = "eee">EEE</option>
+        </optgroup>
+    </select>
+    <br/>
+    <!-- Data List -->
+    <label for = "college"> College Name:</label>
+    <input list = "colleges" id = "college" name = "college">
+    <datalist id = "colleges">
+        <option value = "ABC College">ABC</option><!--[TODO]-->
+    </datalist>
+    <br/>
+    <br/>
+ </filedset>
+
+ <br/><br/>
+ <!--Academic Details-->
+ <fieldset>
+    <legend>Academic Details</legend>
+
+    <label for="tenth">10th Percentage</label> 
+    <input 
+    type = "number"
+    id = "tenth"
+    name = "tenth"
+    min="51"
+    max="100"
+    step="0.01"
+    placeholder="Enter percentage"
+    required>
+
+    <br/><br/>
+
+    <label for="intermediate">Intermediate Percentage</label>
+    <input type="number"
+    id="intermediate"
+    name="intermediate"
+    min="0"
+    max="100"
+    step="0.01"
+    placeholder="Enter Percentage">
+
+</fieldset>
+
+<br/><br/>
+
+<!--Academic Performs -->
+ <fieldset>
+    <legend> Academic Performace </legend>
+
+    <label for="cgpa">Current CGPA:</label> 
+
+    <!-- Using one tag to got total input -->
+    <!--TODO-->
+    <input type="number"
+    id="cgpa"
+    name="cgpa"
+    min="5"
+    max="10"
+    step="0.01"
+    required>
+
+</fieldset>
+
+<br/><br/>
+<!-- Form Completion -->
+ <fieldset>
+    <legend> Academic Details </legend>
+
+    <label for="marks">Percentage</label> 
+
+    <!-- Usin--><!--[TODO]-->
+    <input type = "number">
+
+
+</fieldset>
+
+<br/><br/>
+<!-- Buttons -->
+ <br>
+    <button type="checksubmit" onclick="alert('Student form is ready')">Check&Submit</button>
+    <button type="reset">Reset</button>
+    <!--
+    <button type="button" onclick="alert('Student form is ready')">
+        CheckForm
+    </button>
+    -->
+</form>
+
+</body>
+
